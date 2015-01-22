@@ -1,0 +1,20 @@
+imagick_file.lo: /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick_file.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick_file.c -o imagick_file.lo 
+imagick_class.lo: /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick_class.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick_class.c -o imagick_class.lo 
+imagickdraw_class.lo: /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagickdraw_class.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagickdraw_class.c -o imagickdraw_class.lo 
+imagickpixel_class.lo: /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagickpixel_class.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagickpixel_class.c -o imagickpixel_class.lo 
+imagickpixeliterator_class.lo: /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagickpixeliterator_class.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagickpixeliterator_class.c -o imagickpixeliterator_class.lo 
+imagick_helpers.lo: /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick_helpers.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick_helpers.c -o imagick_helpers.lo 
+imagick.lo: /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/downloads/ImageMagick-6.8.9-3/imagick-3.1.0RC2/imagick.c -o imagick.lo 
+$(phplibdir)/imagick.la: ./imagick.la
+	$(LIBTOOL) --mode=install cp ./imagick.la $(phplibdir)
+
+./imagick.la: $(shared_objects_imagick) $(IMAGICK_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_imagick) $(IMAGICK_SHARED_LIBADD)
+

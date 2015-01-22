@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/root/downloads/ImageMagick-6.8.9-3'
+top_builddir='/root/downloads/ImageMagick-6.8.9-3'
+
+set -a
+COMPARE="/root/downloads/ImageMagick-6.8.9-3/utilities/compare"
+COMPOSITE="/root/downloads/ImageMagick-6.8.9-3/utilities/composite"
+CONJURE="/root/downloads/ImageMagick-6.8.9-3/utilities/conjure"
+CONVERT="/root/downloads/ImageMagick-6.8.9-3/utilities/convert"
+DISPLAY="/root/downloads/ImageMagick-6.8.9-3/utilities/display"
+IDENTIFY="/root/downloads/ImageMagick-6.8.9-3/utilities/identify"
+MONTAGE="/root/downloads/ImageMagick-6.8.9-3/utilities/montage" 
+VALIDATE="/root/downloads/ImageMagick-6.8.9-3/tests/validate"
+DRAWTEST="/root/downloads/ImageMagick-6.8.9-3/tests/drawtest"
+WANDTEST="/root/downloads/ImageMagick-6.8.9-3/tests/wandtest"
+LD_LIBRARY_PATH="/root/downloads/ImageMagick-6.8.9-3/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/root/downloads/ImageMagick-6.8.9-3/coders"
+MAGICK_CONFIGURE_PATH="/root/downloads/ImageMagick-6.8.9-3/config:/root/downloads/ImageMagick-6.8.9-3/config"
+MAGICK_FILTER_MODULE_PATH="/root/downloads/ImageMagick-6.8.9-3/filters"
+PATH="/root/downloads/ImageMagick-6.8.9-3/utilities:/root/downloads/ImageMagick-6.8.9-3/tests:${PATH}"
+set +a
